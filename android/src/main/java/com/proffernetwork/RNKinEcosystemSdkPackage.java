@@ -25,4 +25,26 @@ public class RNKinEcosystemSdkPackage implements ReactPackage {
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
       return Collections.emptyList();
     }
+
+    @ReactMethod
+    public void getCachedBalance(final Callback callback) {
+        try {
+            Balance cachedBalance = Kin.getCachedBalance();
+            callback.invoke(null, cachedBalance);
+
+        } catch (ClientException e) {
+            callback.invoke("Error", e);
+        }
+    }
+
+    @ReactMethod
+    public void getBalance(final Callback callback) {
+        try {
+            Balance cachedBalance = Kin.getCachedBalance();
+            callback.invoke(null, cachedBalance);
+
+        } catch (ClientException e) {
+            callback.invoke("Error", e);
+        }
+    }
 }
