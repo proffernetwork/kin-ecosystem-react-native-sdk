@@ -1,6 +1,8 @@
 
 # react-native-kin-ecosystem-sdk
 
+[NOTE] The development of this module is in progress and the module is not production ready.
+
 ## Getting started
 
 `$ npm install react-native-kin-ecosystem-sdk --save`
